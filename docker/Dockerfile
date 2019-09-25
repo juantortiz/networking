@@ -7,3 +7,4 @@ RUN dnf -y install httpd
 RUN dnf clean all
 CMD ["-D", "FOREGROUND"]
 ENTRYPOINT ["/usr/sbin/httpd"]
+EXPOSE 8090/tcp

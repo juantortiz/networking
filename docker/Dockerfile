@@ -1,5 +1,5 @@
 FROM fedora:30
-MAINTAINER juantortiz@gmail.com
+LABEL support="juantortiz@gmail.com"
 WORKDIR /
 COPY . /
 RUN dnf -y update

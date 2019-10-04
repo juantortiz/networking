@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "C:\\Users\\Usuario\\Google Drive\\GitHubProyects"
-		},
-		{
-			"name": "SSH FS - local",
-			"uri": "ssh://local/"
 		}
 	],
 	"settings": {}

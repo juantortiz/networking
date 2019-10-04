@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    image: juantortiz/fedora:http
+    ports: 
+      - "8090:80"
+  database:
+    image: "mariadb"
+    environment:
+      MYSQL_ROOT_PASSWORD: "Kalamar00"
+    ports:
+      - "3406:3306"

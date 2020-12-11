@@ -1,0 +1,27 @@
+#!/usr/bin/expect
+set USER [lindex $argv 0]
+set PASS [lindex $argv 1]
+set HOST [lindex $argv 2]
+
+set send_human {.3 .4 0.6 .1 3}
+set timeout 5
+
+spawn ssh $USER@$HOST
+expect 
+    {
+        'assword:' 
+            {
+                send_human "$PASS\n"
+                expect  
+                    {
+                        "#" {
+                            interact
+                        }
+                        timeout 
+                            {
+                            puts "Error, tiempo de espera agotado\n"
+                        }
+                        
+                }
+        }
+}
